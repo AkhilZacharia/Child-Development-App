@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 
 const domainSchema = new mongoose.Schema({
   domainNumber: Number,
-  domainName: String,
+  domainName: {type: String, required: true},
   description: {type: String, default: ''},
-  ageCategories: [{type: mongoose.Schema.Types.ObjectId,ref: 'ageCategory' }],
+  ageCategories: [{type: mongoose.Schema.Types.ObjectId,ref: 'ageCategory' ,required: true }],
   questions: {type:[{type: mongoose.Schema.Types.ObjectId,ref: 'question' }], default:[]},
 });
 
