@@ -6,6 +6,7 @@ const cors= require('cors');
 
 const routes= require('./routes/router');
 const answerRoutes= require('./routes/answerRouter');
+const questionRoutes= require('./routes/questionRouter');
 
 
 require('dotenv').config();
@@ -16,6 +17,7 @@ app.use(morgan('dev'));
 
 app.use("/",routes);
 app.use("/answer",answerRoutes);
+app.use("/questions",questionRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is active on Port ${process.env.PORT}`);
