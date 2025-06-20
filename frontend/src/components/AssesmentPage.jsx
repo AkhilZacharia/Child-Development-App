@@ -166,15 +166,19 @@ if(cat == '6853ab00db8c0db3982915d4'){
               variant="contained"
               size="large"
               sx={{
-                borderRadius: "30px",
-                px: 5,
-                py: 1.5,
-                textTransform: "none",
-                backgroundColor: "#00b894",
-                ":hover": {
-                  backgroundColor: "#019874"
-                }
-              }}
+    backgroundColor: '#00bfa5',
+    color: '#fff',
+    borderRadius: '30px',
+    padding: '12px 32px',
+    fontSize: '16px',
+    textTransform: 'none',
+    boxShadow: '0 0 12px rgba(0, 191, 165, 0.6)',
+    transition: '0.3s ease-in-out',
+    '&:hover': {
+      backgroundColor: '#00a896',
+      boxShadow: '0 0 20px rgba(0, 191, 165, 0.9)',
+    },
+  }}
             >
               Submit
             </Button>
