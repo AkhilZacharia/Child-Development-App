@@ -11,14 +11,8 @@ const ageCategories = [
 '4 Months',
 '6 Months',
 '9 Months',
-'12 Months',
-'18 Months',
-'24 Months',
-'36 Months',
-'48 Months',
-'60 Months',
-'72 Months',
 ];
+
 
 const handleQuestionChange = (index, field, value) => {
 const updated = [...questions];
@@ -33,21 +27,21 @@ setQuestions([
 ]);
 };
 
-const handleSubmit = (e) => {
-e.preventDefault();
+// const handleSubmit = (e) => {
+// e.preventDefault();
 
-const payload = {
-  ageCategory,
-  domain: domainName,
-  questions,
-};
+// const payload = {
+//   ageCategory,
+//   domain: domainName,
+//   questions,
+// };
 
-console.log('Submitting form data:', payload);
+// console.log('Submitting form data:', payload);
 
-// You can send this payload to your backend via fetch or axios
-// Example:
-// axios.post('/api/agecategory', payload)
-};
+// // You can send this payload to your backend via fetch or axios
+// // Example:
+// // axios.post('/api/agecategory', payload)
+// };
   return (
     <div>
             <div>

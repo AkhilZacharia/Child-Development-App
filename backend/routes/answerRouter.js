@@ -15,6 +15,8 @@ res.send('answer')
 });
 
 router.post('/fourmonths', async (req,res)=>{
+    // console.log('hii 4mnt',req.body);
+    
     let normalCalc= (s)=>{
         if ((s>27)&&(s<45)) {
         res.status(200).send({message:'Child is Healthy'});
@@ -48,7 +50,7 @@ router.post('/fourmonths', async (req,res)=>{
     try {
     let score1 = req.body.eyecontact;
     let score2 = req.body.socialsmile;
-    let score3 = req.body.vocalisingsounds;
+    let score3 = req.body["vocalisingsounds/cooing"];
     let score4 = req.body.headcontrol;
     let score=score1+score2+score3+score4; //total score in 44
     let splScore=score1+score2+score3; // 3 domains only
@@ -67,9 +69,9 @@ router.post('/fourmonths', async (req,res)=>{
 });
 
 router.post('/sixmonths', async (req,res)=>{
-    console.log(req.body.score);
+    console.log(req.body.rollingover);
     try {
-    let score = req.body.score;
+    let score = req.body.rollingover;
     if ((score>=5) && (score<9)) {
         res.status(200).send({message:'Child is Healthy'});
     } else if (score==4) {
